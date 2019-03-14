@@ -202,7 +202,6 @@ class Topic
     	}
     	 
     	$resp = $this->cmq_client->list_subscription($params);
-    	 
     	if ($offset == ""){
     		$next_offset = count($resp['subscriptionList']);
     	}
