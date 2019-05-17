@@ -1,0 +1,12 @@
+{
+    "name": "tencentyun/cmq-php-sdk",
+    "description": "tencent cloud cmq php http client sdk",
+    "type": "library",
+    "authors": [
+        {
+            "name": "yorkxyzhang",
+            "email": "yorkxyzhang@tencent.com"
+        }
+    ],
+    "require": {}
+}
