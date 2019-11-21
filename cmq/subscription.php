@@ -34,7 +34,7 @@ class Subscription
 			$params['protocol'] = $subscription_meta->Protocol;
 		}
 
-        if(! $subscription_meta->bindindKey != null && is_array($subscription_meta->bindindKey)  && !empty($subscription_meta->bindindKey)){
+        if($subscription_meta->bindindKey != null && is_array($subscription_meta->bindindKey)  && !empty($subscription_meta->bindindKey)){
 		$n = 1;
 		    foreach ($subscription_meta->bindindKey as $tag)
 	 	    {	
@@ -44,7 +44,7 @@ class Subscription
 		    }
 	    }
 		
-	    if(! $subscription_meta->FilterTag != null && is_array($subscription_meta->FilterTag)  && !empty($subscription_meta->FilterTag)){
+	    if($subscription_meta->FilterTag != null && is_array($subscription_meta->FilterTag)  && !empty($subscription_meta->FilterTag)){
 		$n = 1;
 		    foreach ($subscription_meta->FilterTag as $tag)
 	 	    {	
@@ -125,7 +125,7 @@ class Subscription
 			$params['protocol'] = $subscription_meta->Protocol;
 		}
 
-        if(! $subscription_meta->bindindKey != null && is_array($subscription_meta->bindindKey)  && !empty($subscription_meta->bindindKey)){
+        if($subscription_meta->bindindKey != null && is_array($subscription_meta->bindindKey)  && !empty($subscription_meta->bindindKey)){
 		$n = 1;
 		    foreach ($subscription_meta->bindindKey as $tag)
 	 	    {	
@@ -135,7 +135,7 @@ class Subscription
 		    }
 	    }
 		
-	    if(! $subscription_meta->FilterTag != null && is_array($subscription_meta->FilterTag)  && !empty($subscription_meta->FilterTag)){
+	    if($subscription_meta->FilterTag != null && is_array($subscription_meta->FilterTag)  && !empty($subscription_meta->FilterTag)){
 		$n = 1;
 		    foreach ($subscription_meta->FilterTag as $tag)
 	 	    {	
@@ -169,8 +169,8 @@ class Subscription
 			}
 		}
 		
-		if( isset($resp['filterTags'])){
-			foreach ($resp['filterTags'] as $tag){
+		if( isset($resp['filterTag'])){
+			foreach ($resp['filterTag'] as $tag){
 				array_push($subscription_meta->FilterTag, $tag);
 			}
 		}
