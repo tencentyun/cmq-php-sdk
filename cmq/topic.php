@@ -160,13 +160,16 @@ class Topic
 	 	  $msgList = $this->cmq_client->batch_publish_message($params);
 
 		  $retMessageList = array();
-			foreach ($msgList as $msg){
-             if(isset($msg['msgId'])){
-				$retmsgId = $msg['msgId'];
-				$retMessageList [] = $retmsgId;
+          if(isset($msgList['msgList'])){
+              foreach ($msgList['msgList'] as $msg){
+                 if(isset($msg['msgId'])) {
+                    $retMsgId = $msg['msgId'];
+                    $retMessageList[] = $retMsgId;
+                  }
               }
-			}
-	          return $retMessageList;
+          }
+
+          return $retMessageList;
 	 	  
 	 }
     /* 列出Topic的Subscriptoin
