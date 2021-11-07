@@ -20,7 +20,7 @@ class CMQClient
         $this->version = $version;
         $this->method = $method;
         $this->sign_method='HmacSHA1';
-        $this->http = new CMQHttp($this->host);
+        $this->http = new CMQHttp($host);
     }
 
     protected function process_host($host) {
